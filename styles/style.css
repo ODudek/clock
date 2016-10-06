@@ -1,19 +1,19 @@
-body{
+body {
     background-color: deepskyblue;
     font-family: courier, monospace;
     text-align: center;
     color: white;
-
 }
-#counter{
+
+#counter {
     width: 800px;
     margin-left: 0px;
     position: absolute;
     padding-top: 70px;
     font-size: 50px;
 }
-#bottom
-{
+
+#bottom {
     margin: auto;
     position: absolute;
     margin-left: 155px;
