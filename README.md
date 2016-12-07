@@ -1,3 +1,3 @@
 # clock
 
-Program odlicza czas do wybranej przez nas daty.
+Simply script which countdown to choosen date

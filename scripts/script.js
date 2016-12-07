@@ -1,5 +1,4 @@
 var $form = document.getElementById('picker');
-// Defaults
 var date = new Date();
 $form.months.value = date.getMonth(); //months from 1-12
 $form.day.value = date.getDate();
@@ -11,18 +10,12 @@ $form.addEventListener('submit', function () {
     var hour = this.hour.value;
     var year = date.getFullYear();
     var target_date = new Date(months + ' ' + day + ', ' + year + ', ' + hour + ':00').getTime();
-    // data odliczania koñcowego
-    // var target_date = new Date('October 03, 2016, 23:59:00').getTime();
-    // zmienne
     var days, hours, minutes, seconds;
+    var $countdownDay = document.getElementById("c-day");
+    var $countdownHour = document.getElementById("c-hour");
+    var $countdownMin = document.getElementById("c-min");
+    var $countdownSec = document.getElementById("c-sec");
 
-    // pobranie tag element
-    var countdownDay = document.getElementById("c-day");
-    var countdownHour = document.getElementById("c-hour");
-    var countdownMin = document.getElementById("c-min");
-    var countdownSec = document.getElementById("c-sec");
-
-    // update co sekunde
     setInterval(function () {
 
 
@@ -38,24 +31,21 @@ $form.addEventListener('submit', function () {
         seconds = parseInt(seconds_left % 60);
 
 
-        countdownDay.innerHTML = days + " : ";
+        $countdownDay.innerHTML = days + " : ";
         if (hours < 10) {
-            countdownHour.innerHTML = "0" + hours + " : ";
+            $countdownHour.innerHTML = "0" + hours + " : ";
         } else {
-            countdownHour.innerHTML = hours + " : ";
+            $countdownHour.innerHTML = hours + " : ";
         }
         if (minutes < 10) {
-            countdownMin.innerHTML = "0" + minutes + " : ";
+            $countdownMin.innerHTML = "0" + minutes + " : ";
         } else {
-            countdownMin.innerHTML = minutes + " : ";
+            $countdownMin.innerHTML = minutes + " : ";
         }
         if (seconds < 10) {
-            countdownSec.innerHTML = "0" + seconds;
+            $countdownSec.innerHTML = "0" + seconds;
         } else {
-            countdownSec.innerHTML = seconds;
+            $countdownSec.innerHTML = seconds;
         }
     }, 1000);
 });
-/**
- * Created by aleksander on 2016-10-06.
- */
