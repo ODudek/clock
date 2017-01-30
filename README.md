@@ -1,3 +1,3 @@
 # clock
 
-Simply script which countdown to choosen date
+Simply script which countdown to chosen date
