@@ -23,21 +23,9 @@ function displayCountDownDate() {
     let seconds = parseInt(secondsLeft);
 
     $displayDate[0].innerHTML = day;
-    if (hours < 10) {
-        $displayDate[1].innerHTML = '0' + hours;
-    } else {
-        $displayDate[1].innerHTML = hours;
-    }
-    if (minutes < 10) {
-        $displayDate[2].innerHTML = '0' + minutes;
-    } else {
-        $displayDate[2].innerHTML = minutes;
-    }
-    if (seconds < 10) {
-        $displayDate[3].innerHTML = '0' + seconds;
-    } else {
-        $displayDate[3].innerHTML = seconds;
-    }
+    $displayDate[1].innerHTML = (hours < 10) ? hours : '0' + hours;
+    $displayDate[2].innerHTML = (minutes < 10) ? minutes : '0' + minutes;
+    $displayDate[3].innerHTML = (seconds < 10) ? seconds : '0' + seconds;
 }
 
 $form.addEventListener("submit", (e) => {
