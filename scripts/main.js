@@ -23,9 +23,9 @@ function displayCountDownDate() {
     let seconds = parseInt(secondsLeft);
 
     $displayDate[0].innerHTML = day;
-    $displayDate[1].innerHTML = (hours < 10) ? hours : '0' + hours;
-    $displayDate[2].innerHTML = (minutes < 10) ? minutes : '0' + minutes;
-    $displayDate[3].innerHTML = (seconds < 10) ? seconds : '0' + seconds;
+    $displayDate[1].innerHTML = (hours < 10) ? '0' + hours : hours;
+    $displayDate[2].innerHTML = (minutes < 10) ? '0' + minutes : minutes;
+    $displayDate[3].innerHTML = (seconds < 10) ? '0' + seconds : seconds;
 }
 
 $form.addEventListener("submit", (e) => {
