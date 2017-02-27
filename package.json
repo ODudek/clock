@@ -1,0 +1,10 @@
+{
+  "name": "clock",
+  "version": "0.0.1",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "css-loader": "^0.26.2",
+    "style-loader": "^0.13.2"
+  }
+}
