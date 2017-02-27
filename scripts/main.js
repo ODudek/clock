@@ -1,3 +1,5 @@
+require ('../styles/style.css');
+
 let $form = document.getElementById('form');
 let $date = document.getElementById('date');
 let $time = document.getElementById('time');
